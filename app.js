@@ -2,8 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const restaurantManager = require ('restaurant-manager-alesscuderi')
 
-restaurantManager.populateLists();
-
 var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));

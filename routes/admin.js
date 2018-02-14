@@ -13,6 +13,7 @@ router.get('/orders', auth,  function(req, res) {
     res.json(restaurantManager.showOrders());
 })
 
+
 router.put('/orders/ready/:id', auth,  function(req, res) {
      restaurantManager.setOrderReady(parseInt(req.params.id));
      res.json({message: 'Order has been set as ready'});
@@ -28,8 +29,8 @@ router.put('/orders/ready/:id', auth,  function(req, res) {
      res.json({message: 'Order has been deleted'});
  })
 
-router.get('/orders/status/:status', auth, function(req, res) {
-     res.json(restaurantManager.showOrdersAs(req.params.status));
+router.get('/orders/:status', auth, function(req, res) {
+     res.json(restaurantManager.filter(req.params.status));
 })
 
 router.get('/profit', auth,  function(req, res) {
