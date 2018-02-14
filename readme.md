@@ -2,7 +2,7 @@
 This package contains APIs for a restaurant manager, that allows both owners and customers to manage orders.
 
 
-## Version: 1.1.0
+## Version: 1.1.2
 Thanks to the optimization of the custom package, now the App is lightweight and needs no function to run at the start.
 
 ## APIs for the Admin
